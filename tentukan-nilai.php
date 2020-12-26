@@ -19,9 +19,9 @@ function tentukan_nilai($number)
     //  kode disini
     if ($number >= 85 && $number <= 100) {
         return "Sangat Baik! <br>";
-    } else if ($number < 70 && $number <= 85) {
+    } else if ($number >= 70 && $number < 85) {
         return "Baik! <br>";
-    } else if ($number >= 60 && $number <= 70) {
+    } else if ($number >= 60 && $number < 70) {
         return "Cukup! <br>";
     } else {
         return "Kurang! <br>";

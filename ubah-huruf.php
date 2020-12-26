@@ -17,10 +17,26 @@ buatlah sebuah file dengan nama ubah-huruf.php. Di dalam file tersebut buatlah s
 
 function ubah_huruf($string){
 //kode di sini
+// for ($i = 0; $i < strlen($string); $i++) {
+
+//     /* 
+//     ord() untuk konversi string ke angka
+//     chr() untuk konversi angka ke string
+//     */
+//     $new_string[$i] = chr(ord($string[$i]) + 1);
+// }
+// // implode() untuk konversi array ke string
+// return implode($new_string). '<br>';
+
+$abjad = "abcdefghijklmnopqrstuvwxyz";
+$output = "";
+
 for ($i = 0; $i < strlen($string); $i++) {
-    $new_string[$i] = chr(ord($string[$i]) + 1);
+    $position = strpos ($abjad, $string[$i]);
+    $output .= substr ($abjad, $position + 1, 1);
 }
-return implode($new_string). '<br>';
+return "$output <br>";
+
 }
 
 // TEST CASES
